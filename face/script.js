@@ -34,6 +34,9 @@ function testSupport(supportedDevices) {
 /**
  * @fileoverview Demonstrates a minimal use case for MediaPipe face tracking.
  */
+ $(document).ready(function(){
+    alert('1')
+ })
 const controls = window;
 const drawingUtils = window;
 const mpFaceDetection = window;
