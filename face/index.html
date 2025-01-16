@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en" >
+<head>
+  <meta charset="UTF-8">
+  <title>MediaPipe - Face Detection</title>
+    <meta charset="utf-8">
+  <link rel="icon" href="favicon.ico">
+<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/@mediapipe/control_utils@0.6/control_utils.css" crossorigin="anonymous">
+  <link rel="stylesheet" type="text/css" href="demo.css" crossorigin="anonymous">
+  <script src="https://cdn.jsdelivr.net/npm/@mediapipe/camera_utils@0.3/camera_utils.js" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@mediapipe/control_utils@0.6/control_utils.js" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@mediapipe/drawing_utils@0.3/drawing_utils.js" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@mediapipe/face_detection/face_detection.js" crossorigin="anonymous"></script><link rel="stylesheet" href="./style.css"><script src="https://code.jquery.com/jquery-3.7.1.js" integrity="sha256-eKhayi8LEQwp4NKxN+CfCh+3qOVUtJn3QNZ0TciWLP4=" crossorigin="anonymous"></script>
+<style type="text/css">
+  .control-panel{display: none;}
+  .container{opacity: 0}
+ body{
+  background-size: contain;
+ }
+ body, html{
+  width: 100%;height: 100%
+ }
+ *{
+  margin: 0
+ }
+ img{
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  opacity: 0;
+  background-color: black
+
+ }
+</style>
+</head>
+<body>
+  <img class="img img_1" src="../seq/img001.png">
+  <img class="img img_2" src="../seq/img002.png">
+  <img class="img img_3" src="../seq/img003.png">
+  <img class="img img_4" src="../seq/img004.png">
+  <img class="img img_5" src="../seq/img005.png">
+  <img class="img img_6" src="../seq/img006.png">
+  <img class="img img_7" src="../seq/img007.png">
+  <img class="img img_8" src="../seq/img008.png">
+  <img class="img img_9" src="../seq/img009.png">
+  <img class="img img_10" src="../seq/img010.png">
+  <img class="img img_11" src="../seq/img011.png">
+  <img class="img img_12" src="../seq/img012.png">
+  <img class="img img_13" src="../seq/img013.png">
+  <img class="img img_14" src="../seq/img014.png">
+  <img class="img img_15" src="../seq/img015.png">
+  <img class="img img_16" src="../seq/img016.png">
+  <img class="img img_17" src="../seq/img017.png">
+  <img class="img img_18" src="../seq/img018.png">
+  <img class="img img_19" src="../seq/img019.png">
+  <img class="img img_20" src="../seq/img020.png">
+  <img class="img img_21" src="../seq/img021.png">
+  <img class="img img_22" src="../seq/img022.png">
+  <img class="img img_23" src="../seq/img023.png">
+  <img class="img img_24" src="../seq/img024.png">
+  <img class="img img_25" src="../seq/img025.png">
+  <img class="img img_26" src="../seq/img026.png">
+  <img class="img img_27" src="../seq/img027.png">
+  <img class="img img_28" src="../seq/img028.png">
+  <img class="img img_29" src="../seq/img029.png">
+  <img class="img img_30" src="../seq/img030.png">
+  <img class="img img_31" src="../seq/img031.png">
+  <img class="img img_32" src="../seq/img032.png">
+  <img class="img img_33" src="../seq/img033.png">
+  <img class="img img_34" src="../seq/img034.png">
+  <img class="img img_35" src="../seq/img035.png">
+  <img class="img img_36" src="../seq/img036.png">
+  <img class="img img_37" src="../seq/img037.png">
+  <img class="img img_38" src="../seq/img038.png">
+  <img class="img img_39" src="../seq/img039.png">
+  <img class="img img_40" src="../seq/img040.png">
+  <img class="img img_41" src="../seq/img041.png">
+  <img class="img img_42" src="../seq/img042.png">
+  <img class="img img_43" src="../seq/img043.png">
+  <img class="img img_44" src="../seq/img044.png">
+  <img class="img img_45" src="../seq/img045.png">
+  <img class="img img_46" src="../seq/img046.png">
+  <img class="img img_47" src="../seq/img047.png">
+  <img class="img img_48" src="../seq/img048.png">
+  <img class="img img_49" src="../seq/img049.png">
+  <img class="img img_50" src="../seq/img050.png">
+  <img class="img img_51" src="../seq/img051.png">
+  <img class="img img_52" src="../seq/img052.png">
+  <img class="img img_53" src="../seq/img053.png">
+  <img class="img img_54" src="../seq/img054.png">
+  <img class="img img_55" src="../seq/img055.png">
+  <img class="img img_56" src="../seq/img056.png">
+  <img class="img img_57" src="../seq/img057.png">
+  <img class="img img_58" src="../seq/img058.png">
+  <img class="img img_59" src="../seq/img059.png">
+  <img class="img img_60" src="../seq/img060.png">
+  <img class="img img_61" src="../seq/img061.png">
+  <img class="img img_62" src="../seq/img062.png">
+  <img class="img img_63" src="../seq/img063.png">
+  <img class="img img_64" src="../seq/img064.png">
+  <img class="img img_65" src="../seq/img065.png">
+  <img class="img img_66" src="../seq/img066.png">
+  <img class="img img_67" src="../seq/img067.png">
+  <img class="img img_68" src="../seq/img068.png">
+  <img class="img img_69" src="../seq/img069.png">
+  <img class="img img_70" src="../seq/img070.png">
+  <img class="img img_71" src="../seq/img071.png">
+  <img class="img img_72" src="../seq/img072.png">
+  <img class="img img_73" src="../seq/img073.png">
+  <img class="img img_74" src="../seq/img074.png">
+  <img class="img img_75" src="../seq/img075.png">
+  <img class="img img_76" src="../seq/img076.png">
+  <img class="img img_77" src="../seq/img077.png">
+  <img class="img img_78" src="../seq/img078.png">
+  <img class="img img_79" src="../seq/img079.png">
+  <img class="img img_80" src="../seq/img080.png">
+  <img class="img img_81" src="../seq/img081.png">
+  <img class="img img_82" src="../seq/img082.png">
+  <img class="img img_83" src="../seq/img083.png">
+  <img class="img img_84" src="../seq/img084.png">
+  <img class="img img_85" src="../seq/img085.png">
+  <img class="img img_86" src="../seq/img086.png">
+  <img class="img img_87" src="../seq/img087.png">
+  <img class="img img_88" src="../seq/img088.png">
+  <img class="img img_89" src="../seq/img089.png">
+  <img class="img img_90" src="../seq/img090.png">
+  <img class="img img_91" src="../seq/img091.png">
+  <img class="img img_92" src="../seq/img092.png">
+  <img class="img img_93" src="../seq/img093.png">
+  <img class="img img_94" src="../seq/img094.png">
+  <img class="img img_95" src="../seq/img095.png">
+  <img class="img img_96" src="../seq/img096.png">
+  <img class="img img_97" src="../seq/img097.png">
+  <img class="img img_98" src="../seq/img098.png">
+  <img class="img img_99" src="../seq/img099.png">
+  <img class="img img_100" src="../seq/img0100.png">
+  <div class="counter"></div>
+  <div class="anti_counter"></div>
+<!-- partial:index.partial.html -->
+<div class="container">
+    <video class="input_video"></video>
+    <div class="canvas-container">
+    <canvas class="output_canvas" width="1280px" height="720px">
+    </canvas>
+    </div>
+    <div class="loading">
+      <div class="spinner"></div>
+      <div class="message">
+        Loading
+      </div>
+    </div>
+    <a class="abs logo" href="http://www.mediapipe.dev" target="_blank">
+      <div style="display: flex;align-items: center;bottom: 0;right: 10px;">
+        <img class="logo" src="logo_white.png" alt="" style="
+          height: 50px;">
+      </div>
+    </a>
+  </div>
+  <div class="control-panel">
+  </div>
+<!-- partial -->
+  <script type="module" src="./script.js"></script>
+
+</body>
+</html>
