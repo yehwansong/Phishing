@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en" >
+<head>
+  <meta charset="UTF-8">
+  <title>MediaPipe - Face Detection</title>
+    <meta charset="utf-8">
+  <link rel="icon" href="favicon.ico">
+<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/@mediapipe/control_utils@0.6/control_utils.css" crossorigin="anonymous">
+  <link rel="stylesheet" type="text/css" href="demo.css" crossorigin="anonymous">
+  <script src="https://cdn.jsdelivr.net/npm/@mediapipe/camera_utils@0.3/camera_utils.js" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@mediapipe/control_utils@0.6/control_utils.js" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@mediapipe/drawing_utils@0.3/drawing_utils.js" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@mediapipe/face_detection/face_detection.js" crossorigin="anonymous"></script><link rel="stylesheet" href="./style.css"><script src="https://code.jquery.com/jquery-3.7.1.js" integrity="sha256-eKhayi8LEQwp4NKxN+CfCh+3qOVUtJn3QNZ0TciWLP4=" crossorigin="anonymous"></script>
+<style type="text/css">
+  .control-panel{display: none;}
+  .container{opacity: 0}
+ body{
+  background-size: contain;
+  background-color: black
+ }
+ body, html{
+  width: 100%;height: 100%
+ }
+ *{
+  margin: 0
+ }
+video{
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  opacity: 0;
+  background-color: black
+
+ }
+ .counter{
+    z-index: 1000000;
+    position: absolute;
+    display: none;
+    color: white}
+</style>
+</head>
+<body>
+
+    <video id="myVideo" muted>
+        <source src="../vid.mp4" type="video/mp4">
+        Your browser does not support the video tag.
+    </video>
+  <div class="counter"></div>
+  <div class="anti_counter"></div>
+<!-- partial:index.partial.html -->
+<div class="container">
+    <video class="input_video"></video>
+    <div class="canvas-container">
+    <canvas class="output_canvas" width="1280px" height="720px">
+    </canvas>
+    </div>
+    <div class="loading">
+      <div class="spinner"></div>
+      <div class="message">
+        Loading
+      </div>
+    </div>
+    <a class="abs logo" href="http://www.mediapipe.dev" target="_blank">
+      <div style="display: flex;align-items: center;bottom: 0;right: 10px;">
+        <img class="logo" src="logo_white.png" alt="" style="
+          height: 50px;">
+      </div>
+    </a>
+  </div>
+  <div class="control-panel">
+  </div>
+<!-- partial -->
+  <script type="module" src="./script.js"></script>
+
+</body>
+</html>
